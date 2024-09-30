@@ -9,7 +9,6 @@ function getCountryInfo(url){
     fetch(url).then(response => {
         return response.json();
     }).then(data => {
-        console.log(data[0])
         flag.src = data[0].flags.png;
         countryName.textContent = data[0].name.common;
         countryCapital.textContent = data[0].capital;
