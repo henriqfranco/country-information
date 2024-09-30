@@ -63,8 +63,6 @@ button {
     transition: --myColor1, --myColor2, text-shadow;
     border: none;
     padding: 1rem;
-    color: white;
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 1);
     cursor: pointer;
     border-radius: 0px 15px 15px 0px;
 }
@@ -72,7 +70,6 @@ button {
 button:hover {
     --myColor1: rgba(0, 14, 255, 1);
     --myColor2: rgba(18, 255, 0, 1);
-    text-shadow: -2px -2px 3px rgba(0, 0, 0, 1);
 }
 
 #flag {
