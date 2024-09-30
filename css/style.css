@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: rgb(44, 44, 44);
+    color: white;
+    font-family: "Fredoka", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.get-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+#country{
+    color: white;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    background-color: rgb(105, 105, 105);
+    padding-left: 10px;
+    border-radius: 15px 0px 0px 15px;
+}
+
+#country::placeholder{
+    color: rgba(255, 255, 255, 0.775);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+@property --myColor1 {
+    syntax: '<color>';
+    initial-value: rgba(18, 255, 0, 1);
+    inherits: false;
+}
+
+@property --myColor2 {
+    syntax: '<color>';
+    initial-value: rgba(0, 14, 255, 1);
+    inherits: false;
+}
+
+button {
+    background: linear-gradient(45deg, var(--myColor1), var(--myColor2));
+    transition: --myColor1, --myColor2, text-shadow;
+    border: none;
+    padding: 1rem;
+    color: white;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 1);
+    cursor: pointer;
+    border-radius: 0px 15px 15px 0px;
+}
+
+button:hover {
+    --myColor1: rgba(0, 14, 255, 1);
+    --myColor2: rgba(18, 255, 0, 1);
+    text-shadow: -2px -2px 3px rgba(0, 0, 0, 1);
+}
+
+#flag {
+    border-radius: 15px 15px 0px 0px;
+}
+
+.infos {
+    color: black;
+    border-radius: 0px 0px 15px 15px;
+    background-color: rgb(255, 255, 255);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.countryInfo {
+    padding-left: 2rem;
+}
