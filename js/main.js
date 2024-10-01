@@ -7,6 +7,9 @@ const countryPopulation = document.getElementById('population');
 
 function getCountryInfo(url){
     fetch(url).then(response => {
+        if(!response.ok){
+            throw new Error('Invalid coutry name.')
+        }
         return response.json();
     }).then(data => {
         flag.src = data[0].flags.png;
@@ -14,6 +17,8 @@ function getCountryInfo(url){
         countryCapital.textContent = data[0].capital;
         countryLanguage.textContent = Object.values(data[0].languages)[0];
         countryPopulation.textContent = data[0].population.toLocaleString();
+    }).catch(err => {
+        console.error(err.message)
     })
 }
 
